@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cassert>
 #include <vector>
 using namespace std;
 const size_t MAX_LEN = 20;
@@ -20,6 +21,7 @@ int main(){
     cout << '\\' << string(width, '-') << "/\n";
 
     ifstream mili("mili.txt");
+    assert(mili);
     string s;
     while (getline(mili, s)) cout << s << '\n';
     return 0;
